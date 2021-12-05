@@ -1,0 +1,308 @@
+/*ceux-ci est un commentaire en css*/
+p{
+    position: relative;
+    width: 425px;
+    border: solid 5px;
+    color: crimson;
+background: rgb(180, 141, 23);}/*mon fond de texte mail est couleur chartreuse*/
+h2{color:darkblue;}
+
+ 
+li { color: blue;
+
+}
+/*div h2{ gRace a ma DIV cela permet disoler uniquement mon h2 et de colorier uniquement une phrase*/
+    /*color: red;
+}*/
+
+
+ 
+.repere{
+    text-transform: uppercase; /*Class repere en rose fushsia*/
+    color: fuchsia;
+}
+.monscroll{
+ position: fixed;/* fixe mon message JE SCROLL SUR SITE*/
+ bottom: 12px; 
+ font-size: 100px;   
+left: 800px;
+     color:red;
+}
+li::selection{
+    background-color: black;/*change le couleur de mon passage de curseur sur tout les li*/
+    color: yellow;
+}     
+.trouver:hover{
+    background-color: gray;/*pseudo class PASSAGE DU CURSEUR SUR ME CONTACTER DEVIENT GRIS*/
+    width: 250px;
+}
+.principal{
+    position: sticky;/*créer un effet glissé sur mon titre sticky*/
+    font-size: 60px;
+  top:80px;
+}
+h2[class="phonie"]{
+    background-color: lightcoral;
+    width: 250px;
+}
+.rouge{
+    
+    color: red;
+}
+    
+.rouge::first-letter {
+    color:green;       /*pseudo code de ma class rouge me colorie la premiére lettre en vert  du 34070 à 100% des autres*/
+    font-size: 100%;
+  } 
+   
+  .rouge::after {
+    content: "MONTPELLIER!"; /*pseudo code de ma classe rouge m'ajoute aprés le 34070 le mot MONTPELLIER en gris */
+    color:grey;
+  }  
+  .Jefloat{
+     
+      width:400px;
+      height:400px;
+      background-color: coral;
+      border: solid 8px black;
+      float:left;
+      padding:0.1%;
+      margin:0.1%;
+      
+  }
+  
+  .deplacement{
+    position: relative;
+      
+    padding:80px;
+    left: 0.10em;
+  }
+.titre{
+  position: relative;
+  width: 350px;
+  background-color: blue;
+  padding: 0px 30px 0px;
+  border: 8px solid black;
+  margin: 20px;
+  top: 230px;
+  left: 7px; 
+  transition-property:padding ,border;
+  transition-duration: 2s,2s;
+  transition-delay: 1s ,3s;
+  transition-timing-function: linear;
+}
+.titre:hover{
+border:15px solid red;
+width: 500px;
+}
+#firstname {
+  background-color: yellow;
+}
+/*////////////////////////////////////////////////////////////////////////////////////////________\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\____*/
+/* On écrit le texte en rouge */
+.exemple {/*je suis passé en p2 pour esquiver l'héritage de ma class exemple------------------------*/
+  color: red;
+  border: solid 5px;
+}
+
+
+/* Et on veut que le texte mis en avant
+   prenne la valeur initiale de
+   color */
+.exemple em {
+  color: initial;
+  
+} 
+img{
+  border: 9px solid red;/*correspond à mon image d'un clavier d'ordinateur*/
+transition-property: width,border;
+transition-duration: 1s ,1s;
+transition-delay: 1s ,2s;
+transition-timing-function: linear;
+}
+
+img:hover{
+  border: 15px solid blue;/*correspond à mon image d'un clavier d'ordinateur*/
+width: 500px;
+}
+/*JE PEUX AUSSI ECRIRE MA TRANSITION SUR UNE SEULE LIGNE COMME CI-DESSOUS
+transition : width 2s , border 2s;*/
+
+/*pour des problème de comptabiliter de certains navigateur  pour être sur que notre transition passe il faut rajouter un webkit dans le code
+
+transition : width 2s , border 2s ;------> est mon code 1
+-webkit-transition-property: width 2s , border 2s;-----> j'indique un webkit 2
+-moz-transition-property:width 2s , border 2s;--------> pour mozilla 3
+-o-transition-property: width 2s , border 2s; -------> pour opéra 4
+JE TAPE TOUTE C'EST LIGNE QUAND JE CREER MA TRANSITION POUR ÊTRE SUR QUE LES
+ANCIENS NAVIGATEURS PUISSENT LIRE CETTE TRANSITION!!!!!!
+ LES TRANSITIONS SONT UTILISE POUR LES MENUS DE LIENS EN PRINCIPE*/
+
+.animation {/*-------------------------------------->>>>>>>je cible ma class*/
+  
+  position:relative;
+  width: 200px;
+  height: 200px;
+  background-color:red;/*couleur fixe de départ*/
+  animation-name: animation;/*un nom pour mon animation*/ 
+  /*************webkit-animation-name: animation ;******************1111111111*/
+  /***********-moz-animation: animation;************2222222222222222222*/
+  /*************-o-animation: animation;************3333333333333333333333*/
+  animation-duration: 2s;/*durée de l'animation*/  
+  animation-delay: 0s;/*le delais avant que l'animation commence*/
+  animation-iteration-count: infinite;/*nombre de répétition à l'infinit*/
+  animation-direction: alternate-reverse;/* sens des couleures*/
+}
+@keyframes animation {/*----------->j'indique que c'est une animation que j'execute et que je vais chercher*/
+  from {background-color: green;} /*de couleur verte*/
+  to {background-color: blue;}/*à la couleur bleue */
+}/*C'ETAIT LA PREMIERE FAçON D'ANIMER*******************************************************************
+-------------------------------------------------------------------------------------------------------------------------------*/
+.animation2 em{
+  color: initial;/*je réinisialise la couleur de mon texte*/
+}
+.animation2 em{
+  animation-name: animation2;
+/*************webkit-animation-name: animation ;******************1111111111*/
+  /***********-moz-animation: animation;************2222222222222222222*/
+  /*************-o-animation: animation;************3333333333333333333333*/
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;/*alterne le mouvement dans un sens*/
+  position: relative;
+  z-index: 1;/*relier avec la class .montenor et rajoutant une valeur supérieur à 0 mon titre passe devant mon image=================*/
+}
+@keyframes animation2 {/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>j'anime mon texte<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+  0%{left:0px;top:0px}/*les pourcentages joue sur la souplesse des mouvements*/
+  25%{left: 300px;top:0px;}
+  50%{left: 300px;top:200px;}
+  75%{left: 0px;top: 200px;}
+  100%{left:0px;top:0px;}
+}
+/*C'ETAIT LA DEUXIEME FAçON D'ANIMER***********************************************************************
+-----------------------------------------------------------------------------------------------------------------------------------*/
+.fonddecran em{
+  color: initial;
+  font-family: fantasy;
+  color:blueviolet;
+  /*-------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+}
+/*body{
+  background-image:url(https://cdn.pixabay.com/photo/2017/09/14/11/07/water-2748640_960_720.png), url(https://cdn.pixabay.com/photo/2017/07/13/16/16/paper-2500942_960_720.jpg);/*j'aurais pu mettre une image de mes dossiers("fond de papier jpeg");*/
+/*}/*mettre toujours le png en premier pour jopuer sur la transparense de l'image ave le jpeg*/
+header{
+  background-color: grey;
+  height: 300px;
+  background-image:url(https://cdn.pixabay.com/photo/2017/09/04/19/42/text-2715161__340.png), url(https://cdn.pixabay.com/photo/2017/07/13/16/16/paper-2500942_960_720.jpg);
+  background-repeat:repeat-x;/*ce background repeat permet de corriger la répétition d'images dans le sens de la longueur et y en verticalité */
+}
+h4{
+  font-size: 25px;
+}
+/********************************************************************************************************************************************************************/
+/*£££££££££££££££££££££££££££££££££££....PREMIERE ETAPE DE MON ANIMATION......§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§*/
+.tenor-gif-embed {/*je suis allé chercher mon gif*/
+ animation-name: anim; /*fonction animation-name je lui donne un repère que j'appelle !!!!anim!!!qui va servir pour mon @keyframes!!!!*/
+ animation-duration: 6s;/*temps de la durée de mon animation gif*/
+ animation-iteration-count: infinite;/*c'est une boucle qui est créer pour mon animation*/
+ position: relative;/*qui me permet de bouger mon gif*/
+ z-index: 0;/*pour ce cas de figure ne sert pas à grand chose*/
+}
+/*%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%.........DEUXIEME ETAPE DE MON ANIMATION..........%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+@keyframes anim{/*le keyframes petit code pour animer !!!!! anim relié avec l'autre anim de la premiére étape!!!!!!!!!*/
+  0%{left: 0px;top: 0px;}                     /* !!!!!!!! toute ces donnée permettent un mouvement en carré!!!!!!!!!*/
+  25%{left: 300px;top: 0px ;}
+  50%{left: 300px;top:200px;}
+  75%{left: 0px;top: 200px;}
+  100%{left:0px;top:0px;}
+}
+/*********************************************************************************************************************************************************************/
+.box{
+  
+  width: 1020px;
+  height:340px;
+  border:1px solid black;
+  background-image: url(https://cdn.pixabay.com/photo/2015/12/15/20/30/houses-1094900_960_720.png);
+  background-repeat:no-repeat;/*évite de répéter mon dessin*/
+  /*background-origin: border-box;*//* vient se coller sur la bordure d'origine de mon élément html*/
+  /*background-origin: padding-box;*//*vient se coller sur la boîte de paddig d'origine de mon élément */
+  background-origin: content-box;/*valeur par défaut du contenu de ma boîte,se voit à peine,vient se mettre dans son contenu au niveau du content-box*/
+/****************************************************************************************************************************************************************************/
+ background-position: top;/*permet de définir une position initiale relative a origin "content-box"et de son arrière plan ce met en haut de ma boîte
+                                   d'autre combinaison avec background-position ** top** bottom** left** right** center** bottom right**bottom left** top left** top right**
+                                   10% L'AVANTAGE DES % C'EST LORSQUE ON AGRANDIE L'IMAGE OU DIMINUE AVEC LE CURSEUR MES ELEMENTS SUIVENT SANS SE DEFORMER!!!!!!
+                                   10px ** 50px** 10px 50px** top 50px**/
+    /*peut s'utiliser dans un header pour des manipulations plus simples pour des feuilles complètes*/
+}
+/*<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+
+.suite{
+  width:100%;
+  height: 200px;
+  background-color: grey;
+  background-image: url(https://cdn.pixabay.com/photo/2017/05/21/14/19/landscape-2331416_960_720.jpg);/*je pose une image sur ma bande grise qui va s'adapter à la même dimension de 100% par 400px*/
+  background-size: cover; /*"auto" est par défaut et rentre en mémoire******"contain" permet de redimensionner l'image pour qu'elle soit la plus grande possible et que l'image
+  conserve ses proportions mais le probléme elle se répète pour être la plus grande possible** avec "cover" c'est l'opposé à "contain"l'image est redimensionnée pour être aussi grande que possible
+  et pour conserver ses proportions et c'est interressant pour créer un HEADER***on peut utiliser position "bottom" ou "top" "center" je peux écrir ""background-size:100""px
+  ce qui va diminuer mon image ou ""background-size:100%"" */
+  background-repeat: no-repeat;
+  background-position:center;
+  /*//////<header class="banniermodifier">--><!--Je créer une bannière class dans le but de poser un support grey ""background-color:grey"" pour lequel ou je vais y coller une image J.P.E.G.
+  qui me servira d'arrière plan et évitera un manque d'image-->///////////////////////////////////////////////////////////////*/
+      
+
+}
+
+
+
+.suite2{
+  font-size: 50px;/* tout correspond à mon écriture de mon titre """Header"""*/
+  margin: 0px;
+  padding: 20px;
+  color: red;
+}
+/*///////////////////////////////////LE BACKGROUND IMAGE EST SUPER POUR LES BANNIERE//////////////////////////////////////////////////////////////////////////////*/
+
+.box1{
+  width: 80%;
+  height: 400px;
+  background-image: url(https://cdn.pixabay.com/photo/2021/03/07/10/20/sunset-6075836_960_720.jpg);
+ background-size: cover;
+ border: 10px dashed rgba(255, 230, 0, 0.671);
+ padding:40px;
+ background-clip: border-box;/*border-box l'image est bien sur le bord de ma bordure*** en """content-box""" mon image se place dans sa boîte de contenu CONTENT-BOX= 80%X400PX */
+}/**!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+.bonjour{
+  color:transparent;                                              /* ce code permet une ecriture couleur image %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%*/
+  font-size: 100px;
+  background-image: url(https://cdn.pixabay.com/photo/2021/03/07/10/20/sunset-6075836_960_720.jpg);
+  background-clip: text;
+  /* si j'ai un probléme pour mon texte transparent je fais un ""webkit-background-clip:text;""" pour le rendre compatible avec mon navigateur*/
+}
+/*!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+.pseudo{                                                                          /*LES PSEUDOD CLASSES*/
+  font-size: 60px;/*dimension de mon lien*/
+  
+}
+.pseudo:hover{
+  background-color:fuchsia; /*survole avec le pointeur, sans nécessairement l'activer.*/
+}
+
+.pseudo:link{
+  color: green;/*lien*/
+}
+.pseudo:visited{/*permet de modifier l'aspect d'un lien après que l'utilisateur l'a visité.*/
+  color: yellowgreen;
+}
+.pseudo:active{ /*indiquant que l'activation a bien été détectée par le navigateu*/
+  color: blue;
+}
+/*^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^*/
+/*@keyframes tenor-gif-embed *//*{/*>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>j'anime mon texte<<<<<<<....titre pour jacques.....<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<*/
+ /* 0%{left:0px;top:0px}*//*les pourcentages joue sur la souplesse des mouvements*/
+  /*25%{left: 300px;top:0px;}
+  50%{left: 300px;top:200px;}
+  75%{left: 0px;top: 200px;}
+  100%{left:0px;top:0px;}
+}*/

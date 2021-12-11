@@ -1,265 +1,230 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet"> 
-<link rel="shortcut icon" href="14 favicon.ico" type="image/x-icon">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="14 favicon.ico" type="image/x-icon" />
+    <title>RIGAL Bruno</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<title>Parein </title>
-
-</head>
-<style>
-*{
-    margin: 0;
-    padding: 0;
-}
-header{
-    background-color: grey;
-    height: 200px;
-    color: white;
-    text-align: center;
-    font-family: 'Caveat', cursive;
-    
-}
-header h1 {
-font-size: 110px;
-letter-spacing: 7px;
-text-shadow: 2px 2px 5px black;   /*AXE x, AXE y, RADUIS, BLACK*/
-}
-header h2 {
- font: size 40px;
- letter-spacing: 3px;
-  
-}
- nav{
-     height: 50px;
-     background-color: lightgrey;  /* BARRE DE NAVIGATION DESSOUS LES BOUTONS*/
-     text-align: center;
-     box-shadow: 1px 1px 5px black; /**boîte ombre*AXE x, AXE y, RADUIS, BLACK*/
-     position: sticky; /*permet de garder toujours en visu ma barre de navigation lors d'un SCROLL ou défilement de menu*/
-     top: 0;/*fixe une hauteur limite pour la "POSITION STICKY*/
- }
- nav li{
-     display: inline-block; /*display définit l'affichage en ligne ou en block*//*inline-block L'élément s'inscrit dans le contenu environnant comme une boîte en ligne et organise son propre contenu en bloc.*/
-     padding: 10px 30px 0 0; /* 10 pour haut;;30 pour droite;; 0 pour bas;;0pour gauche*/
-     font-size: 20px;
-    }
-    nav a{
-        text-decoration: none; /*je fais disparaitre la decoration de soulignement de mes titre lien*/
-        background-color: grey;
-        color: lightgrey;        /*MES 4 BOUTONS DE LA BARRE DE NAVIGATION*/
-        padding: 5px;
-        border-radius: 5px;
-        box-shadow: 1px 1px 1px black; /**boîte ombre*AXE x, AXE y, RADUIS, BLACK*/
-    
-    }                                      
-   nav a:hover{   /*pseudo class survol pour changement de couleur des 4 boutons*/
-       color: white;
-       box-shadow: 2px 2px 2px black;
-   }                                                   
-.wrapper{  
-display:grid;/*qui est mon conteneur GRID puisque c'est une grille que je met en place*/
-grid-template-columns: 1fr 3fr; /*je définis le nombre colonnes dans ma grille*/
-width: 80%; /*une largeur de 80% de ma page réparti sur mes fr*/
-max-width: 900px; /*cela évite que mes 2 colonnes ne s'élargissent pas plus de 900px en mode plein écran*/
-margin: auto; /*permet de centrer automatiquement mes 2 colonnes*/
-
-}
-.wrapper aside{
-    border: 1px dotted grey;
-    /*height: 2000px;*/
-}
-.wrapper section{
-    border: 1px dotted grey;
-}
-.title{
-    padding: 5px;
-    box-shadow: 1px 1px 5px grey;
-    margin: 20px 10px 10px 10px;
-    font-size: 15px;
-}
-
-footer{
-    background-color: grey;
-    text-align: center;
-    color: white;
-    box-shadow: 1px 1px 5px black;/*boîte ombre*/
-}
-footer p{
-    height: 40px;
-    position: relative; /*permet de déplacer mon paragraphe*/
-    top: 10px; /*permet de centrer en vertical mon paragraphe*/
-    letter-spacing: 3px;
-    text-transform: uppercase;/*je modifie la police d'écriture de mon paragraphe*/
-    text-shadow: 1px 1px 1px black ; /*texte ombre*/
-}
-.contact {
-    font-size: 15px;
-    padding: 25px;
-}
-input , textarea{
-    display: block;
-    width: 100%;
-    height: 25px;
-    margin-bottom: 20px;
-}
-textarea{
-    height: 300px;
-}
-
-label{
-    font-weight: bold;
-}
-
-input[type="submit"]
-{
-
-width: 200px;
-height: 60px;
-margin:auto;
-margin-top: 20px;
-    
-}
-
-@media  screen and (max-width: 350px) /*avant j'étais a 1000px*/
-{
-
-    header {
-        height: 90px;
-    }
-  
-    header h1 {
-        font-size: 30px;
-    }    
-    header h2 {
-        font-size: 20px;
-    }
-    
-    aside img{
-         display: none;
-     }
-     .wrapper{
-        grid-template-columns: 1fr;
-    }
-    
-    nav a{
-        font-size: 9px;
-    }
-
-
-
-
-}
-
-
-
-
-
-</style>
-
-
-
-
-
-
-
-
-<body>
+  <body>
     <header>
-        <h1>RIGAL Bruno</h1>
-        <h2>Développeur Html Css Javascript</h2>
+      <h1>RIGAL Bruno</h1>
+      <h2>Développeur Html Css Javascript</h2>
     </header>
-<nav>
-    <ul>
-        <li><a href="maquette.html">Accueil</a></li><!--C'est la page principal de mon site en lui même-->
+
+    <nav>
+      <ul>
+        <li><a href="maquette.html">Accueil</a></li>
+        <!--C'est la page principal de mon site en lui même-->
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="cv.html">Curriculum viter</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    
+        <li><a href="mailto:rigalrigal2014@outlook.fr">Contact</a></li>
+      </ul>
+    </nav>
 
-
-    </ul>
-</nav>
-<div class="wrapper">  <!--"wrapper"veux dire embalage-->
-
-    <aside>
+    <div class="wrapper">
+      <!--"wrapper"veux dire embalage-->
+      <aside>
         <article>
-            <img src="lourd.jpg"
-            alt="portrait du cv">
-            <h3 class="title">INFORMATION</h3>
-            <ul>
-               <li>  Nom : RIGAL</li>
-               <li>  Prénom : Bruno</li>
-               <li>  Née le 03/02/1970</li>
-               <li>  Situation familiale : Célibataire</li>
-               <li>  Nombre d'enfants : 1</li> 
-               <li>  Titulaire du permis B</li>
-            </ul>
-            <br>
+          <img src="lourd.jpg" alt="portrait du cv" />
+          <h3 class="title">INFORMATION</h3>
+          <ul>
+            <li>Nom : RIGAL</li>
+            <li>Prénom : Bruno</li>
+            <li>Née le 03/02/1970</li>
+            <li>Situation familiale : Célibataire</li>
+            <li>Nombre d'enfants : 1</li>
+            <li>Titulaire du permis B</li>
+          </ul>
+          <br />
         </article>
-      
+
         <article>
           <h3 class="title">MES ATOUTS</h3>
-       <div class="atouts"><!--Cette div englobe toutes mes progress barre-->
-         
-          <p>Bonne humeur: <span>300%</span></p>
-          <progress value="100" max="100"></progress> <!--m'affiche des barres de progressions en ligne-->
-         
-          <p>Adaptation: <span>100%</span></p>
-          <progress value="100" max="100"></progress>
-         
-          <p>Curiosité: <span>80%</span></p>
-          <progress value="80" max="100"></progress>
-    
-          <p>Polyvalence: <span>90%</span></p>
-          <progress value="90" max="100"></progress>
-    
-          <p>Créativité: <span>95%</span></p>
-          <progress value="95" max="100"></progress>
-    
-          <p>Sens du détail: <span>99.99%</span></p>
-          <progress value="99" max="100"></progress>
-        </div>
-        <br>
-    
+          <div class="progress">
+            <!--Cette div englobe toutes mes progress barre-->
+            <div class="progress__fill"></div>
+            <span class="progress__text">100%</span>
+            <!-- <p>Bonne humeur: <span>300%</span></p>
+          <progress id="bars" value="100" max="100"></progress> -->
+
+            <!--m'affiche des barres de progressions en ligne-->
+
+            <p>Adaptation: <span>100%</span></p>
+            <progress id="bars" value="100" max="100"></progress>
+
+            <p>Curiosité: <span>80%</span></p>
+            <progress id="bars" value="80" max="100"></progress>
+
+            <p>Polyvalence: <span>90%</span></p>
+            <progress id="bars" value="90" max="100"></progress>
+
+            <p>Créativité: <span>95%</span></p>
+            <progress id="bars" value="95" max="100"></progress>
+
+            <p>Sens du détail: <span>99.99%</span></p>
+            <progress id="bars" value="99" max="100"></progress>
+          </div>
+          <br />
         </article>
-    </aside>
+      </aside>
 
-<div class="contact"><!--j'ai remplacé ma section par une dic contact-->
-<h1 class="title">ME CONTACTER</h1>
-<br>
-<form action="#"> <!--il faut du PHP pour renseigner mon action je mets # pour éviter les erreurs-->
-<label for="nom">Nom</label>
-<input type="text" id="nom" placeholder="Renseigner votre nom">
+      <div class="cv">
+        <!--j'ai supprimé ma section pour la remplacer par une div CV-->
+        <h1 class="title">EXPERIENCE PROFESSIONNELLE</h1>
 
-<label for="prenom">Prenom</label>
-<input type="text" id="prenom" placeholder="Renseigner votre nom">
+        <div class="grid-container">
+          <div class="date">
+            <p>Du xx xx xxxx</p>
+            <p>Au xx xx xxxx</p>
+          </div>
+          <div class="exp">
+            <h4>NOM DE L'ENTREPRISE</h4>
+            <h5>Poste occupé</h5>
+            <p>Tache réalisées</p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              earum reiciendis ea aperiam veniam vitae fugit molestias itaque,
+              excepturi odio, minus pariatur dolore temporibus mollitia nostrum
+              recusandae est iusto nulla!
+            </p>
+          </div>
+          <div class="date">
+            <p>Du xx xx xxxx</p>
+            <p>Au xx xx xxxx</p>
+          </div>
+          <div class="exp">
+            <h4>NOM DE L'ENTREPRISE</h4>
+            <h5>Poste occupé</h5>
+            <p>Tache réalisées</p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              earum reiciendis ea aperiam veniam vitae fugit molestias itaque,
+              excepturi odio, minus pariatur dolore temporibus mollitia nostrum
+              recusandae est iusto nulla!
+            </p>
+          </div>
+          <div class="date">
+            <p>Du xx xx xxxx</p>
+            <p>Au xx xx xxxx</p>
+          </div>
+          <div class="exp">
+            <h4>NOM DE L'ENTREPRISE</h4>
+            <h5>Poste occupé</h5>
+            <p>Tache réalisées</p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              earum reiciendis ea aperiam veniam vitae fugit molestias itaque,
+              excepturi odio, minus pariatur dolore temporibus mollitia nostrum
+              recusandae est iusto nulla!
+            </p>
+          </div>
+          <div class="date">
+            <p>Du xx xx xxxx</p>
+            <p>Au xx xx xxxx</p>
+          </div>
+          <div class="exp">
+            <h4>NOM DE L'ENTREPRISE</h4>
+            <h5>Poste occupé</h5>
+            <p>Tache réalisées</p>
+            <br />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+              earum reiciendis ea aperiam veniam vitae fugit molestias itaque,
+              excepturi odio, minus pariatur dolore temporibus mollitia nostrum
+              recusandae est iusto nulla!
+            </p>
+          </div>
+        </div>
 
-<label for="email">Email</label>
-<input type="email" id="" placeholder="Renseigner votre email" 
-required> <!-----permet de rendre obligatoire le remplissage d'un champ et bloquer la validation du formulaire--------->
+        <h1 class="title">FORMATION</h1>
 
-<label for="msg">Votre message</label>
-<textarea name="msg"id="msg"cols="30"           
-rows="10"placeholder="renseigner votre 
-message"required></textarea>
-<!--le textarea permet de définir une zone d'écriture + ou - grande avec les attributs cols et rows -->
+        <div class="grid-container">
+          <!--je réouvre ma grille container-->
 
-<p>*Champs requis</p>
+          <div class="date">
+            <p>Année</p>
+            <p>Ville,Pays</p>
+          </div>
 
-<input type="submit" value="envoyer">
-</form> <!--construction d'un formulaire-->
+          <div class="exp">
+            <h3>Diplôme: xxxxxxxxxxxxx</h3>
+            <p>Université ou école</p>
+          </div>
+          <div class="date">
+            <p>Année</p>
+            <p>Ville,Pays</p>
+          </div>
 
-</div>
-</div>
+          <div class="exp">
+            <h3>Diplôme: xxxxxxxxxxxxx</h3>
+            <p>Université ou école</p>
+          </div>
 
-<footer>
-    <p>&copy 2021 - RIGAL-Bruno - Tous droits réservé.</p> <!--Le "&"" permet d'afficher le logo C dans un cercle-->
-</footer>
+          <div class="date">
+            <p>Année</p>
+            <p>Ville,Pays</p>
+          </div>
 
+          <div class="exp">
+            <h3>Diplôme: xxxxxxxxxxx</h3>
+            <p>Université ou école</p>
+          </div>
 
-</body>
+          <div class="date">
+            <p>Année</p>
+            <p>Ville,Pays</p>
+          </div>
+
+          <div class="exp">
+            <h3>Diplôme: xxxxxxxxxxxxxxxxx</h3>
+            <p>Université ou école</p>
+          </div>
+
+          <label for="prenom">Prenom</label>
+          <input type="text" id="prenom" placeholder="Renseigner votre nom" />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id=""
+            placeholder="Renseigner votre email"
+            required
+          />
+          <!-----permet de rendre obligatoire le remplissage d'un champ et bloquer la validation du formulaire--------->
+
+          <label for="msg">Votre message</label>
+          <textarea
+            name="msg"
+            id="msg"
+            cols="30"
+            rows="10"
+            placeholder="renseigner votre message"
+            required
+          ></textarea>
+          <!--le textarea permet de définir une zone d'écriture + ou - grande avec les attributs cols et rows -->
+
+          <p>*Champs requis</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>&copy 2021 - RIGAL Bruno - Tous droits réservé.</p>
+      <!--Le "&"" permet d'afficher le logo C dans un cercle-->
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
 </html>

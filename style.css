@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+
+  header {
+    background-color: grey;
+    height: 200px;
+    color: white;
+    text-align: center;
+    font-family: "Caveat", cursive;
+  }
+
+
+  header h1 {
+    font-size: 110px;
+    letter-spacing: 7px;
+    text-shadow: 2px 2px 5px black; /*AXE x, AXE y, RADUIS, BLACK*/
+  }
+
+
+  header h2 {
+    font: size 40px;
+    letter-spacing: 3px;
+  }
+
+
+  nav {
+    height: 50px;
+    background-color: lightgrey; /* BARRE DE NAVIGATION DESSOUS LES BOUTONS*/
+    text-align: center;
+    box-shadow: 1px 1px 5px black; /**boîte ombre*AXE x, AXE y, RADUIS, BLACK*/
+    position: sticky; /*permet de garder toujours en visu ma barre de navigation lors d'un SCROLL ou défilement de menu*/
+    top: 0; /*fixe une hauteur limite pour la "POSITION STICKY*/
+    font-size: 20px;
+  }
+
+
+  nav li {
+    display: inline-block; /*display définit l'affichage en ligne ou en block*/ /*inline-block L'élément s'inscrit dans le contenu environnant comme une boîte en ligne et organise son propre contenu en bloc.*/
+    padding: 10px 30px 0 0; /* 10 pour haut;;30 pour droite;; 0 pour bas;;0pour gauche*/
+  }
+
+
+  nav a {
+    text-decoration: none; /*je fais disparaitre la decoration de soulignement de mes titre lien*/
+    background-color: grey;
+    color: lightgrey; /*MES 4 BOUTONS DE LA BARRE DE NAVIGATION*/
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px black; /**boîte ombre*AXE x, AXE y, RADUIS, BLACK*/
+  }
+
+
+  nav a:hover {
+    /*pseudo class survol pour changement de couleur des 4 boutons*/
+    color: white;
+    box-shadow: 2px 2px 2px black;
+  }
+
+
+  .wrapper {
+    display: grid; /*qui est mon conteneur GRID puisque c'est une grille que je met en place*/
+    grid-template-columns: 1fr 3fr; /*je définis le nombre colonnes dans ma grille*/
+    width: 80%; /*une largeur de 80% de ma page réparti sur mes fr*/
+    max-width: 900px; /*cela évite que mes 2 colonnes ne s'élargissent pas plus de 900px en mode plein écran*/
+    margin: auto; /*permet de centrer automatiquement mes 2 colonnes*/
+    gap: 20px; /*permet de définir les espaces entre les lignes et entre les colonnes d'une grille.*/
+  }
+
+
+  .wrapper aside {
+    /*border: 5px dotted grey;*/
+    /*height: 500px;*/
+    text-align: center; /*permet de centrer le texte information sous mon image*/
+  }
+
+
+  .wrapper aside img {
+    /*width: 150px;*/
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-radius: 10%;
+    border: 2px solid white;
+    box-shadow: 2px 2px 5px grey;
+  }
+
+
+  .title {
+    padding: 5px;
+    box-shadow: 1px 1px 5px grey;
+    margin: 20px 10px 10px 10px;
+    font-size: 15px;
+  }
+
+
+  .wrapper aside ul {
+    list-style-type: none; /*j'enléve les puces des textes de mes listes*/
+    text-align: left; /*j'aligne mes textes une fois les puces enlevées*/
+    margin: 0 15px;
+    line-height: 20px; /*hauteur de ligne des textes*/
+  }
+
+
+  .cv .grid-container {
+    /*je cible 2 classes par mes points*/
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    font-size: 15px;
+    gap: 30px 0px; /* permet de jouer sur l'espace des 2 axes*/
+  }
+
+
+  .cv .date p {
+    /*je cible 2 class et les paragrphes*/
+    color: grey;
+    padding-left: 15px;
+    margin-bottom: 10px;
+  }
+
+
+
+  footer {
+    background-color: grey;
+    text-align: center;
+    color: white;
+    box-shadow: 1px 1px 5px black; /*boîte ombre*/
+  }
+
+
+  footer p {
+    height: 40px;
+    position: relative; /*permet de déplacer mon paragraphe*/
+    top: 10px; /*permet de centrer en vertical mon paragraphe*/
+    letter-spacing: 3px;
+    text-transform: uppercase; /*je modifie la police d'écriture de mon paragraphe*/
+    text-shadow: 1px 1px 1px black; /*texte ombre*/
+  }
+   
+.progress {
+  position: relative;
+  width: 160px;
+  height: 16px;
+  background: #9cbab4;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.progress__fill {
+  width: 100%;
+  height: 100%;
+  background: #434d4b;
+  transition: all 0.2s;
+}
+
+ .progress__text{
+position: absolute;
+top: 50%;
+right: 5px;
+transform: translateY(-50%);
+font: bold 14px 'Quicksand', sans-serif;
+color: #ffffff;
+
+ }
+
+
+
+  @media screen and (max-width: 1000px) {
+    header {
+      height: 100px;
+    }
+    header h1 {
+      font-size: 30px;
+    }
+    header h2 {
+      font-size: 20px;
+    }
+    aside img {
+      display: none;
+    }
+    .wrapper {
+      grid-template-columns: 1fr;
+    }
+
+    nav a {
+      font-size: 13px;
+    }
+
+    nav li {
+      padding: 6px 20px 0 0;
+    }
+
+    .grid-container {
+      grid-template-columns: 0fr 2fr;
+
+      /*margin: -8px;*/
+
+      text-align: left;
+    }
+
+    .exp p {
+      font-size: 12px;
+      text-align: left;
+    }
+
+    .date {
+      box-sizing: content-box;
+      width: 25%;
+      columns: 13px;
+    }
+
+    
+
+    
+
+    
+  }

@@ -175,9 +175,9 @@ color: #ffffff;
     header h2 {
       font-size: 20px;
     }
-    aside img {
-      display: none;
-    }
+    /* aside img {
+     /* display: none;*/
+   /* } */
     .wrapper {
       grid-template-columns: 1fr;
     }
